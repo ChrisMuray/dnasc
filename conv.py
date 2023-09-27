@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 import numpy as np
-import matplotlib.pyplot as plt
 import json
 
 T = 2
@@ -198,6 +197,6 @@ while t[-1] < T:
     
     s['sigma_pG'][-1] += -(delta_LNpG / n_fG) * (s['EC_G'][-1] - s['EC_G'][-2] - s['CC_G'][-1] + s['CC_G'][-2]) + m(s['sigma_pG'][-1])
 
-with open("sims.json","a") as outfile:
+with open("conv_sims.json","a") as outfile:
     json.dump(s, outfile)
     outfile.write("\n")

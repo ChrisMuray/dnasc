@@ -4,7 +4,7 @@ from concurrent.futures import ProcessPoolExecutor
 import subprocess
 
 def sim():
-    subprocess.call(['./con.py'])
+    subprocess.call(['./conv.py'])
 
 if __name__ == '__main__':
     nsims = 10

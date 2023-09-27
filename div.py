@@ -187,6 +187,10 @@ while t[-1] < T:
     s['sigma_pS'][-1] += -(PL_S / (2 * h0 * n_fS)) * (s['EC_S'][-1] - s['EC_S'][-2] - s['CC_S'][-1] + s['CC_S'][-2]) + m(s['sigma_pS'][-1])
     s['sigma_pG'][-1] +=  (PL_G / (2 * h0 * n_fG)) * (s['EC_G'][-1] - s['EC_G'][-2] - s['CC_G'][-1] + s['CC_G'][-2]) + m(s['sigma_pS'][-1])
 
+with open("div_sims.json","a") as outfile:
+    json.dump(s, outfile)
+    outfile.write("\n")
+
 # reaction_didnt_happen = False
 # for i in range(len(reactions)):
 #     if (i not in reaction_indices):
